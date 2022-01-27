@@ -1,0 +1,32 @@
+<html>
+<body>
+
+
+<h2>Memory</h2>
+{{memory}}
+    
+
+<h2> CPU </h2>
+{% for line in sar %}
+    {{ line.decode('utf-8') }} </br>
+   {% endfor %}
+
+<h2> Load </h2>
+{% for line in uptime %}
+    {{ line.decode('utf-8') }} </br>
+   {% endfor %}
+   
+
+   
+   <div class="content">
+        <form action="cmd" method="post">
+            Command: <input name="cmd" type="text" size="25" />
+            
+
+            <input name="mySubmit" type="submit" value="submit" />
+        </form>
+    </div>
+
+
+</body> 
+</html>

